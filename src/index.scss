@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+// For Light Mode
+$white: hsl(0, 0%, 100);
+$veryLightGrayForLightMode : hsl(0,0%,98%);
+$darkGrayForLightMode : hsl(0, 0%, 52%);
+$veryDarkBlueForLightMode : hsl(200, 15%, 8%);
+// For Dark Mode
+$veryDarkBlueForDarkMode : hsl(207, 26%, 17%);
+$darkBlueForDarkMode : hsl(209, 23%, 22%);
+//font
+$homepage: 14px;
+$detailPage: 16px;
+//font family
+$nunito : 'Nunito Sans', sans-serif;
+$light : 300;
+$medium : 600;
+$bold : 800;
+
+* {
+  font-family: $nunito;
+  font-style: none;
+  text-decoration: none;
+}
+body {
+  background: $veryLightGrayForLightMode;
+}
+.countries__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+
+    .countries {
+        display: grid;
+        background: $white;
+        margin: auto;
+        width: 20rem;
+        grid-template-columns: 1fr ;
+        justify-items: start;
+        align-items: center;
+        box-shadow: 0px 0px 16px -8px;
+    }
+    .flag {
+        width: 100%;
+        height: 12rem;
+        object-fit: cover;
+        margin: 0;
+    }
+    h1 {
+      font-weight: $bold;
+      font-size: $homepage + 5px;
+      padding: 0.5rem 1rem;
+    }
+    p {
+      max-width: 15rem;
+      padding: 0 1rem;
+    }
+  }
+  @mixin paragraphs {
+    margin: 1.5rem 0 0.5rem 0
+
+  }
+  .name{
+    @include paragraphs;
+  }
+  .population,
+  .region,
+  .capital {
+    margin: 0.5rem 0;
+  }
+
+
+  input[type="text"] {
+    width: 15rem;
+    height: 1.5rem;
+    margin: 1.6rem 0.6rem 2rem 1.6rem;
+  }
+
+a {
+  color: black;
+  font-weight: $light;
+  width: 100%;
+}
+
+// chosen country 
+.chosenCountryDiv {
+  display: flex;
+  gap: 5rem;
+  margin-top: 3rem;
+
+  .chosenCountryImg {
+    width: 30rem;
+    object-fit: cover;
+    margin: 0 0rem 0 3rem;
+  }
+
+  .informatic__page {
+    display: flex;
+    gap: 5rem;
+    div {
+      span {
+        font-weight: $bold;
+      }
+    }
+  }
+}
+
+.chosen a {
+  display: flex;
+  padding: 0.5rem 4rem;
+  width: 4rem;
+  margin: 3rem;
+  position: relative;
+  top: 1rem;
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0rem 0rem 3rem -16px;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-around;
+
+}

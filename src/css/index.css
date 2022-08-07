@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: hsl(0deg, 0%, 98%);
+}
+
+.countries__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+}
+.countries__list .countries {
+  display: grid;
+  background: hsl(0deg, 0%, 100%);
+  margin: auto;
+  width: 20rem;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  align-items: center;
+  box-shadow: 0px 0px 16px -8px;
+}
+.countries__list .flag {
+  width: 100%;
+  height: 12rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0;
+}
+.countries__list h1 {
+  font-weight: 800;
+  font-size: 19px;
+  padding: 0.5rem 1rem;
+}
+.countries__list p {
+  max-width: 15rem;
+  padding: 0 1rem;
+}
+
+.name {
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.population,
+.region,
+.capital {
+  margin: 0.5rem 0;
+}
+
+input[type=text] {
+  width: 15rem;
+  height: 1.5rem;
+  margin: 1.6rem 0.6rem 2rem 1.6rem;
+}
+
+a {
+  color: black;
+  font-weight: 300;
+  width: 100%;
+}
+
+.chosenCountryDiv {
+  display: flex;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+.chosenCountryDiv .chosenCountryImg {
+  width: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 0rem 0 3rem;
+}
+.chosenCountryDiv .informatic__page {
+  display: flex;
+  gap: 5rem;
+}
+.chosenCountryDiv .informatic__page div span {
+  font-weight: 800;
+}
+
+.chosen a {
+  display: flex;
+  padding: 0.5rem 4rem;
+  width: 4rem;
+  margin: 3rem;
+  position: relative;
+  top: 1rem;
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0rem 0rem 3rem -16px;
+  border-radius: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}/*# sourceMappingURL=index.css.map */
