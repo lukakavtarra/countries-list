@@ -31,7 +31,7 @@ if(window.location.pathname == '/countries-list/'){
         </div>
     )
 }else {
-    const showCountry = window.location.pathname.replace('/',"");
+    const showCountry = window.location.pathname.replace('/countries-list/',"");
     // console.log(showCountry)
     const chosenCountry = sendCountries.filter(country => {
         return country.cca2.includes(showCountry)
