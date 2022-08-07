@@ -4,7 +4,7 @@ import {IoReturnDownBack} from 'react-icons/io5'
 class Countries extends Component {
   render() {
     const {sendCountries, clickedCountry, searchButton} = this.props;
-if(window.location.pathname == '/'){
+if(window.location.pathname == '/countries-list/'){
     console.log(sendCountries)
     return (
         <div className="">
