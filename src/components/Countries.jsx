@@ -31,6 +31,7 @@ if(window.location.pathname == '/countries-list/'){
         </div>
     )
 }else {
+    return (<div>test</div>)
     // get pathnames last two characters
     const showCountry = window.location.pathname.slice(-2);
     console.log(showCountry)
