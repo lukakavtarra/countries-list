@@ -3,21 +3,13 @@ import { useLocation } from 'react-router-dom';
 import {IoReturnDownBack} from 'react-icons/io5'
 import { Link } from 'react-router-dom';
 
-
-
 export default function Mycountry() {
 
     const location = useLocation()
     const { countryChosed, sendCountries } = location.state
    
-    console.log(sendCountries)
-    console.log(countryChosed)
-   
-  
-
-    // get pathnames last two characters
     const showCountry = countryChosed;
-    console.log(showCountry)
+    
     const chosenCountry = sendCountries.filter(country => {
         return country.cca2.includes(countryChosed)
       })
