@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Countries from './Countries';
-import LinkedCountry from './LinkedCountry';
+// import LinkedCountry from './LinkedCountry';
 export default class indexPage extends Component {
     state = {
         countries: [],

@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { Link } from 'react-router-dom';
 
 
-import LinkedCountry from './LinkedCountry';
+// import LinkedCountry from './LinkedCountry';
 class Countries extends Component {
   render() {
     const {sendCountries, clickedCountry, searchButton} = this.props;

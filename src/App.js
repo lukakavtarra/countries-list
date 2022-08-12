@@ -1,8 +1,8 @@
 import './App.css';
 import {Component} from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import IndexPage from './components/IndexPage';
-import LinkedCountry from './components/LinkedCountry';
+// import LinkedCountry from './components/LinkedCountry';
 import Mycountry from './components/mycountry';
 class App extends Component {
   state = {
@@ -26,15 +26,14 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
+      // <BrowserRouter>
         <div className="App">
-        <IndexPage />
           <Routes path='/countries-list' element={<IndexPage/>}>
             <Route index element = {<IndexPage />} />
             <Route path='/country' element = {<Mycountry/>} />
           </Routes>
         </div>
-       </BrowserRouter>
+      //  </BrowserRouter>
       
     )
   }
