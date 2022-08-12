@@ -28,8 +28,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-        <p>testicular</p>
-          <Routes path='/countries-list/' element={<IndexPage/>}>
+        <IndexPage />
+          <Routes path='/countries-list' element={<IndexPage/>}>
             <Route index element = {<IndexPage />} />
             <Route path='/country' element = {<Mycountry/>} />
           </Routes>
