@@ -1,6 +1,9 @@
 import './App.css';
 import {Component} from 'react';
-import Countries from './components/Countries';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import IndexPage from './components/IndexPage';
+import LinkedCountry from './components/LinkedCountry';
+import Mycountry from './components/mycountry';
 class App extends Component {
   state = {
     countries: [],
@@ -21,35 +24,20 @@ class App extends Component {
         )
       );
   }
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
 
-  //Get Key's While Changing Input On Search
- onSearchChange = (event) => {
-  const searchField = event.target.value.toLowerCase();
-  this.setState(() => {return {searchField}})  
-}
-
-render() {
-  const clickOnACountry = (item) => {
-    console.log(item)
-    const chosenCountry = countries.filter(country => {
-      return country.cca2.includes(item)
-    })
-    console.log(chosenCountry);
+          <Routes path='/' element={<IndexPage/>}>
+            <Route index element = {<IndexPage />} />
+            <Route path='/country' element = {<Mycountry/>} />
+          </Routes>
+        </div>
+       </BrowserRouter>
+      
+    )
   }
-  const {countries, searchField} = this.state;
-  const { onSearchChange, test } = this;
-  // Get Filtered Countrys After 
-  const filteredCountries = countries.filter(country => {
-    return country.name.official.toLowerCase().includes(searchField)
-  })
-  return (
-    <div className='App'>
-      <Countries 
-      sendCountries = {filteredCountries} 
-      clickedCountry = {clickOnACountry}
-      searchButton = {onSearchChange} />
-    </div>
-  );
-}
+
 }
 export default App;
