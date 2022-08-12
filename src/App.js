@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Routes path='/countries-list' element={<IndexPage/>}>
+          <Routes path='/countries-list/' element={<IndexPage/>}>
             <Route index element = {<IndexPage />} />
             <Route path='/country' element = {<Mycountry/>} />
           </Routes>
