@@ -9,11 +9,9 @@ export default function Mycountry() {
     const { countryChosed, sendCountries } = location.state
    
     const showCountry = countryChosed;
-    
     const chosenCountry = sendCountries.filter(country => {
         return country.cca2.includes(countryChosed)
       })
-      console.log(chosenCountry)
 
       if(chosenCountry.length){
         const getNative = chosenCountry[0].name.nativeName[Object.keys(chosenCountry[0].name.nativeName)[0]]

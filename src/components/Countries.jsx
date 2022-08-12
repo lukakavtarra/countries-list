@@ -6,7 +6,6 @@ import LinkedCountry from './LinkedCountry';
 class Countries extends Component {
   render() {
     const {sendCountries, clickedCountry, searchButton} = this.props;
-if(window.location.pathname === '/countries-list/' || window.location.pathname === '/'){
   
     return (
         <div className="">
@@ -34,6 +33,6 @@ if(window.location.pathname === '/countries-list/' || window.location.pathname =
 }
 
   }
-}
+
 
 export default Countries
